@@ -107,11 +107,11 @@ exports.getPost = async (req, res) => {
             owner: {
                 $in: user.following,
             }
-        });
+        }).populate("owner likes comments.user");
 
         res.json({
             success: true,
-            posts
+            posts:posts.reverse(),
         })
     } catch (error) {
 
