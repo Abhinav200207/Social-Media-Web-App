@@ -61,7 +61,7 @@ userSchema.methods.isPasswordMatched = async function(password){
 }
 
 userSchema.methods.generateToken = function(){
-    return jwt.sign({_id:this._id},process.env.JWT_SECREAT)
+    return jwt.sign({_id:this._id},"45645643afjuhjialkcsiuanomf6585451acyignhlmjca3546685agchukjjhk356846")
 }
 
 module.exports = mongoose.model("User", userSchema);

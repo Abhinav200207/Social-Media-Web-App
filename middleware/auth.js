@@ -11,7 +11,7 @@ exports.isAuthenticated = async (req, res, next) => {
             });
         }
 
-        const data = jwt.verify(accessToken, process.env.JWT_SECREAT);
+        const data = jwt.verify(accessToken, "45645643afjuhjialkcsiuanomf6585451acyignhlmjca3546685agchukjjhk356846");
 
         req.user = await User.findById(data._id);
 
